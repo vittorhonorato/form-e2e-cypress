@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eceff1;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  padding: 24px;
+  background: black;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+
+.mat-form-field {
+  color: white;
+}
+
+.mat-input-element {
+  color: white;
+}
+
+.mat-form-field-outline {
+  border-color: #90caf9;
+}
+
+.mat-form-field.mat-focused .mat-form-field-outline {
+  border-color: #e91e63;
+}
+
+.mat-error {
+  color: #ff8a80;
+}
+
+button.mat-raised-button {
+  color: white;
+}
