@@ -1,27 +1,98 @@
-# FormE2eTests
+# Formulário de Login Angular com Testes E2E
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+Este projeto é uma implementação de formulário de login usando Angular, apresentando testes end-to-end com Cypress e um backend simulado usando JSON Server. O projeto demonstra as melhores práticas no manuseio de formulários, integração com HTTP client e testes automatizados.
 
-## Development server
+## Tecnologias Utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular 13.3.11
+- Cypress para Testes E2E
+- JSON Server para Backend Simulado
+- Angular HttpClient para Integração com API
+- TypeScript
 
-## Code scaffolding
+## Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Formulário de login com validação
+- Integração com API REST usando Angular HttpClient
+- Servidor backend simulado usando JSON Server
+- Testes E2E abrangentes com Cypress
+- Camada de serviço para comunicação com API
 
-## Build
+## Estrutura do Projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   └── form/           # Componente do formulário de login
+│   │   └── services/
+│   │       └── form.service.ts  # Serviço de comunicação com API
+├── cypress/
+│   ├── e2e/                    # Arquivos de teste E2E
+│   └── support/                # Arquivos de suporte do Cypress
+└── db.json                     # Arquivo de banco de dados do JSON Server
+```
 
-## Running unit tests
+## Como Começar
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Instale as dependências:
+```bash
+npm install
+```
 
-## Running end-to-end tests
+2. Inicie o JSON Server (backend simulado):
+```bash
+npm run json-server
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Inicie o servidor de desenvolvimento Angular:
+```bash
+ng serve
+```
 
-## Further help
+4. Abra a aplicação no seu navegador:
+```
+http://localhost:4200
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Executando os Testes
+
+Para executar os testes E2E do Cypress:
+
+```bash
+npm run cypress:open
+```
+
+Isso abrirá o Test Runner do Cypress onde você pode executar testes individuais ou toda a suite de testes.
+
+## Integração com API
+
+O projeto usa o HttpClient do Angular para se comunicar com a API backend. O `FormService` gerencia todas as chamadas à API e está implementado em `src/app/services/form.service.ts`.
+
+## Testes E2E
+
+Os testes end-to-end são escritos usando Cypress e podem ser encontrados no diretório `cypress/e2e`. Os testes cobrem:
+
+- Validação de formulário
+- Cenários de login bem-sucedidos
+- Tratamento de erros
+- Testes de integração com API
+
+## Notas de Desenvolvimento
+
+- A aplicação usa JSON Server para simular uma API backend
+- Todas as chamadas à API são abstraídas através de serviços
+- Os testes E2E são organizados na estrutura recomendada pelo Cypress
+- A validação de formulário é implementada usando os recursos nativos de validação do Angular
+
+## Como Contribuir
+
+1. Faça um fork do repositório
+2. Crie sua branch de feature: `git checkout -b feature/minha-nova-funcionalidade`
+3. Faça commit das suas alterações: `git commit -am 'Adiciona nova funcionalidade'`
+4. Faça push para a branch: `git push origin feature/minha-nova-funcionalidade`
+5. Envie um pull request
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT.
