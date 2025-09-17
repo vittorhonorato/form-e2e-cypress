@@ -92,7 +92,3 @@ Os testes end-to-end são escritos usando Cypress e podem ser encontrados no dir
 3. Faça commit das suas alterações: `git commit -am 'Adiciona nova funcionalidade'`
 4. Faça push para a branch: `git push origin feature/minha-nova-funcionalidade`
 5. Envie um pull request
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT.
